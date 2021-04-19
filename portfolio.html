@@ -14,10 +14,23 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 		<!-- chartjs library -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.0/chart.min.js" integrity="sha512-RGbSeD/jDcZBWNsI1VCvdjcDULuSfWTtIva2ek5FtteXeSjLfXac4kqkDRHVGf1TwsXCAqPTF7/EYITD0/CTqw==" crossorigin="anonymous"></script>		
-		<title>Naman Singh</title>
-
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js" integrity="sha512-zO8oeHCxetPn1Hd9PdDleg5Tw1bAaP0YmNvPY8CwcRyUk7d7/+nyElmFrB6f7vg4f7Fv4sui1mcep8RIEShczg==" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js" integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA==" crossorigin="anonymous"></script>		<title>Naman Singh</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.css" integrity="sha512-C7hOmCgGzihKXzyPU/z4nv97W0d9bv4ALuuEbSf6hm93myico9qa0hv4dODThvCsqQUmKmLcJmlpRmCaApr83g==" crossorigin="anonymous" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js" integrity="sha512-hZf9Qhp3rlDJBvAKvmiG+goaaKRZA6LKUO35oK6EsM0/kjPK32Yw7URqrq3Q+Nvbbt8Usss+IekL7CRn83dYmw==" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+		
+		
 		<style>
+			body{
+				background-image: url("file:///home/naman/Desktop/portfolio/74185.jpg");
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-size: 100% 100%;
+
+			}
+			
 			.red {
 				color: white;
 				background-color: red ;
@@ -80,7 +93,7 @@
 
 	</head>
 
-	<body style="background-color: rgb(39, 35, 35);">
+	<body>
 
 		<div class="container">
 
@@ -140,67 +153,76 @@
 
 			</section>
 
-			<section>
+			<section style="margin-top: 10%">
 
-				<h1><a href="#" class="effect-underline d-flex justify-content-center ">About Me</a></h1><br><br>
+				<h1><a href="#" class="effect-underline d-flex justify-content-center ">My Ability</a></h1><br><br>
 
 				<div class="row d-flex justify-content-center align-items-center ">
-					<div class="col-xl-6 col-xl-offset-4 col-xl-6 col-xl-offset-4 ">
-						<canvas id="myChart" width="400" height="400"></canvas>
+					<div class="col-xl-8 col-xl-offset-2 col-xl-8 col-xl-offset-2 " >
+						<canvas id="skillChart" width="400" height="300" ></canvas>
+
 					</div>
 				</div>
 			</section>
 			
+			<section>
+
+			</section>
+
+
+
+
+
 
 		</div>
 
-		<script>
-			var ctx = document.getElementById('myChart');
-			var myChart = new Chart(ctx, {
-				type: 'radar',
-				data: {
-					labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-					datasets: [{
-						label: '# of Votes',
-						data: [36,87, 89 ,90, 77, 80],
-						backgroundColor: [
-							'rgba(255, 99, 132, 0.2)',
-							'rgba(54, 162, 235, 0.2)',
-							'rgba(255, 206, 86, 0.2)',
-							'rgba(75, 192, 192, 0.2)',
-							'rgba(153, 102, 255, 0.2)',
-							'rgba(255, 159, 64, 0.2)'
-						],
-						borderColor: [
-							'rgba(255, 99, 132, 1)',
-							'rgba(54, 162, 235, 1)',
-							'rgba(255, 206, 86, 1)',
-							'rgba(75, 192, 192, 1)',
-							'rgba(153, 102, 255, 1)',
-							'rgba(255, 159, 64, 1)'
-						],
-						borderWidth: 1
-					}]
+		<script >
+			var skillCanvas = document.getElementById('skillChart');
+			var skillData = {
+			labels: ["C++", "Python", "Javascript", "HTML","Bootstrap","React" ],
+			datasets: [{
+				label: "My SKIILS",
+				borderColor: 'rgb(255, 10, 10)',
+				backgroundColor: 'rgba(0, 89, 255, 0.5)',
+				data: [83, 76, 89, 82, 75, 90],
+				borderWidth: 4,
+			}]
+			};
+			var skillChart = new Chart(skillCanvas, {
+			type: 'radar',
+			data: skillData,
+			options: {
+
+				legend: {
+					labels: {
+						fontColor: '#11c091'
+					}
 				},
-				options: {
-					legend: {
-						display: false
+				scale: {
+					gridLines: {
+						color: 'rgb(254,254,254)',
 					},
-						scale: {
-							ticks: {
-								min: 0,
-								max: 100,
-								stepSize: 10
-							},
-						gridLines: {
-							lineWidth: 2,
-							color: "lightgreen",
-							borderDash: context => context.index == 6 ? [] : [6, 4]
-						}
+					ticks: {
+						beginAtZero: false,
+						max: 100,
+						min: 20,
+						stepSize: 10,
+						fontColor: 'rgb(255, 255, 255)',
+						backdropColor:'rgb(0,0,0)'
+					},
+					pointLabels: {
+						fontSize: 20,
+						fontColor: 'rgb(255, 255, 255)'
+					},
+					angleLines: {
+						color: 'rgb(255, 255, 255)',
 					}
 				}
+			}
 			});
-			</script>
+		</script>
+	
+
 
 	</body>
 </html>
