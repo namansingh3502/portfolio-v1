@@ -13,6 +13,8 @@ const Sidebars = styled.div`
 
 const NavItems = styled.div`
   position: relative;
+  border-color: black;
+  border-width: 1px;
 
   i {
     width: 50px;
@@ -23,7 +25,6 @@ const NavItems = styled.div`
     background-color: #414141;
     transition: all 0.3s;
   }
-
   span {
     position: absolute;
     background-color: #414141;
@@ -36,19 +37,14 @@ const NavItems = styled.div`
     transition: all 0.3s;
     z-index: -1;
   }
-
   :hover i {
     transform: scale(1.1);
-    box-shadow: 0px 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
   }
-
   :hover span {
     transform: translateX(0);
   }
-
 `;
-
-
 
 const NavigationBar = () => {
     const home = <FontAwesomeIcon icon={faHome}/>
