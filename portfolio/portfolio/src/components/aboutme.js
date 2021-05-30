@@ -42,11 +42,9 @@ const TextBox = styled.div`
   text-align: center;
   font-size: 1.5em;
   line-height: 1.6em;
-  
   p{
     padding: 10px;
   }
-  
 `
 
 const Profile = () => {
