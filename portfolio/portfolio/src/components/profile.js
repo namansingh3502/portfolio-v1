@@ -28,15 +28,18 @@ const Profile = () => {
             <div className="grid grid-cols-6 md:gap-5 lg:gap-10" style={{color:"white"}}>
                 <div className="col-start-2 col-span-4 md:col-start-2 md:col-span-2 lg:col-start-2 lg:col-span-2 place-self-center">
                     <StaticImage
-                        className=" image flex flex-row object-contain"
+                        className="flex flex-row object-contain"
                         src="../images/me.png"
-                        alt="MyProfile photo"
+                        alt="My Profile photo"
                     />
                 </div>
                 <div className="col-start-2 col-span-4 md:col-start-4 md:col-span-3 text-3xl md:text-4xl lg:text-5xl xl:text-7xl self-center font-serif">
-                    <div className="flex flex-row" >
+                    <div className="flex flex-row " >
                         <h1>
-                            Hello there,</h1>
+                            Hello there
+                        </h1>
+                        <img className="flex flex-row object-contain place-self-center mx-4 h-7 md:h-9 lg:h-12 xl:h-16" src={hand}/>
+                        <h1>,</h1>
                     </div>
                     <div className="flex flex-row mt-5">
                         <br/>
