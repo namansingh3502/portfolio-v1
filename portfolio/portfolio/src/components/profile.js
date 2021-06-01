@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from "gatsby"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -9,8 +8,6 @@ const AccountLink = styled.div`
       margin-top: 30px;
     }
 `
-
-
 const Profile = () => {
     const hand = "https://raw.githubusercontent.com/aemmadi/aemmadi/master/wave.gif";
     const github_icon = "https://img.shields.io/badge/-black?style=flat-square&logo=github&logoColor=white";
@@ -22,9 +19,8 @@ const Profile = () => {
     const gmail_icon = "https://img.shields.io/badge/-c14438?style=flat-square&logo=Gmail&logoColor=white";
     const gmail_profile = "mailto:namansingh0305@gmail.com";
 
-
     return (
-        <section className="min-h-screen flex flex-row-1 place-self-center">
+        <section className="min-h-screen flex flex-row-1 place-self-center" id="Home">
             <div className="grid grid-cols-6 md:gap-5 lg:gap-10" style={{color:"white"}}>
                 <div className="col-start-2 col-span-4 md:col-start-2 md:col-span-2 lg:col-start-2 lg:col-span-2 place-self-center">
                     <StaticImage
@@ -33,12 +29,12 @@ const Profile = () => {
                         alt="My Profile photo"
                     />
                 </div>
-                <div className="col-start-2 col-span-4 md:col-start-4 md:col-span-3 text-3xl md:text-4xl lg:text-5xl xl:text-7xl self-center font-serif">
-                    <div className="flex flex-row " >
+                <div className="col-start-3 col-span-3 md:col-start-4 md:col-span-3 text-3xl md:text-4xl lg:text-5xl xl:text-7xl self-center font-serif">
+                    <div className="flex flex-row">
                         <h1>
                             Hello there
                         </h1>
-                        <img className="flex flex-row object-contain place-self-center mx-4 h-7 md:h-9 lg:h-12 xl:h-16" src={hand}/>
+                        <img className="flex flex-row object-contain place-self-center mx-4 h-7 md:h-9 lg:h-12 xl:h-16" src={hand} alt="waving hand"/>
                         <h1>,</h1>
                     </div>
                     <div className="flex flex-row mt-5">
@@ -55,20 +51,21 @@ const Profile = () => {
                                 Naman Singh
                             </span>
                         </h1>
+
                     </div>
                     <AccountLink className="flex flex-row ">
-                        <Link to={github_profile}>
-                            <img className="h-8 lg:h-10 mr-4" src={github_icon} alt="github_link"/>
-                        </Link>
-                        <Link to={linkedin_profile}>
-                            <img className="h-8 lg:h-10 mr-4" src={linkedin_icon} alt="linkedin_link"/>
-                        </Link>
-                        <Link to={insta_profile}>
-                            <img className="h-8 lg:h-10 mr-4" src={insta_icon} alt="insta_link"/>
-                        </Link>
-                        <Link to={gmail_profile}>
-                            <img className="h-8 lg:h-10 mr-4" src={gmail_icon} alt="gmail_link"/>
-                        </Link>
+                        <a href={github_profile}>
+                            <img className="h-8 lg:h-10 mx-2" src={github_icon} alt="github_link"/>
+                        </a>
+                        <a href={linkedin_profile}>
+                            <img className="h-8 lg:h-10 mx-2" src={linkedin_icon} alt="linkedin_link"/>
+                        </a>
+                        <a href={insta_profile}>
+                            <img className="h-8 lg:h-10 mx-2" src={insta_icon} alt="insta_link"/>
+                        </a>
+                        <a href={gmail_profile}>
+                            <img className="h-8 lg:h-10 mx-2" src={gmail_icon} alt="gmail_link"/>
+                        </a>
                     </AccountLink>
                 </div>
             </div>

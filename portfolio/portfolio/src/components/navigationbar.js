@@ -52,7 +52,7 @@ const NavigationBar = () => {
     const skills = <FontAwesomeIcon icon={faTools}/>
 
     return (
-        <Sidebars>
+        <Sidebars className="hidden lg:block ">
             <NavItems>
                 <Link to="#Home">
                     <i> {home} </i>
@@ -66,7 +66,7 @@ const NavigationBar = () => {
                 </Link>
             </NavItems>
             <NavItems>
-                <Link to="#Skills">
+                <Link to="#Backpack">
                     <i> {skills} </i>
                     <span> Skill </span>
                 </Link>

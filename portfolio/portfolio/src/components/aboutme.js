@@ -3,11 +3,7 @@ import styled from "styled-components"
 import {StaticImage} from "gatsby-plugin-image";
 
 const Heading = styled.div`
-  justify-content: center;
-  font-size: 3.5em;
-  padding-bottom: 20px;
- 
-  p {
+  h1 {
     text-align: center;
     padding: 15px;
     color: rgb(86, 25, 255);
@@ -15,13 +11,13 @@ const Heading = styled.div`
     margin: 0 10px;
     position: relative;
   }
-  p, p:after, p:before {
+  h1, h1:after, h1:before {
     transition: all .8s;
   }
-  p:hover {
+  h1:hover {
     color: rgb(0, 0, 0);
   }
-  p:after {
+  h1:after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -33,43 +29,39 @@ const Heading = styled.div`
     background: #aaa;
     height: 1px;
   }
-  p:hover:after {
-    width: 80%;
+  h1:hover:after {
+    width: 100%
   }
 `
-const TextBox = styled.div`
-  color:white;
-  text-align: center;
-  font-size: 1.5em;
-  line-height: 1.6em;
-  p{
-    padding: 10px;
-  }
-`
-
 const Profile = () => {
     return (
         <section id="AboutMe">
-            <Heading>
-                <p>About Me</p>
+            <Heading className="pb-4 mt-6 text-4xl md:text-5xl lg:text-6xl xl:text-6xl self-center font-serif">
+                <h1>Short Introduction</h1>
             </Heading>
-            <div className="grid grid-cols-5 gap-4 " style={{paddingTop:10}}>
-                <StaticImage
-                    className="col-start-1 col-span-2 place-self-center"
-                    src="../images/clipart.png"
-                    alt="MyProfile photo"
-                />
-                <TextBox className="col-start-3 col-span-3 place-self-center font-serif ">
-                    <p>I'm Naman Singh, and as you might have already read. </p>
+            <div className="grid grid-cols-6 gap-10 mt-2 lg:mt-0 px-6 lg:px-4">
+                <div className="hidden lg:block lg:col-start-1 lg:col-span-2 place-self-center place-items-end ">
+                    <StaticImage
+                        className="flex flex-row object-contain  m-4"
+                        src="../images/clipart.png"
+                        alt="MyProfile photo"
+                    />
+                </div>
 
-                    <p>I am a sophomore from Bangalore pursuing my Bachelor's in Computer Science and Engineering.</p>
+                <div className="col-start-1 col-span-6 lg:col-start-3 lg:col-span-4 xl:px-6 md:text-xl lg:text-xl xl:text-2xl text-center place-self-center font-serif xl:my-16"
+                    style={{
+                        color:"white"
+                    }}>
+                    <p className="p-2 md:mb-4">I'm Naman Singh, and as you might have already read. </p>
 
-                    <p>This website was made to showcase all of what I can do and plan to do. Don't judge my writing based on this section though, I am still working on it.</p>
+                    <p className="p-2 md:mb-4">I am a sophomore from Bangalore pursuing my Bachelor's in Computer Science and Engineering.</p>
 
-                    <p>I got into development because computers have always fascinated me. Seeing code getting converted to things to do complex tasks like games, applications, was no less than magic to me and that's where my quest of learning and building began.</p>
+                    <p className="p-2 md:mb-4">This website was made to showcase all of what I can do and plan to do. Don't judge my writing based on this section though, I am still working on it.</p>
 
-                    <p>I created this website so I could showcase all this and through this process, make it easier for you to connect with me. If you like what you see, head over to the contact section below and send me a text. I would love to hear from you.</p>
-                </TextBox>
+                    <p className="p-2 md:mb-4">I got into development because computers have always fascinated me. Seeing code getting converted to things to do complex tasks like games, applications, was no less than magic to me and that's where my quest of learning and building began.</p>
+
+                    <p className="p-2 md:mb-4">I created this website so I could showcase all this and through this process, make it easier for you to connect with me. If you like what you see, head over to the contact section below and send me a text. I would love to hear from you.</p>
+                </div>
 
             </div>
 
