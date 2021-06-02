@@ -22,14 +22,14 @@ const Profile = () => {
     return (
         <section className="min-h-screen flex flex-row-1 place-self-center" id="Home">
             <div className="grid grid-cols-6 md:gap-5 lg:gap-10" style={{color:"white"}}>
-                <div className="col-start-2 col-span-4 md:col-start-2 md:col-span-2 lg:col-start-2 lg:col-span-2 place-self-center">
+                <div className="col-start-1 col-span-6 sm:col-start-2 sm:col-span-4 md:col-start-2 md:col-span-2 lg:col-start-2 lg:col-span-2 place-self-center">
                     <StaticImage
                         className="flex flex-row object-contain"
                         src="../images/me.png"
                         alt="My Profile photo"
                     />
                 </div>
-                <div className="col-start-3 col-span-3 md:col-start-4 md:col-span-3 text-3xl md:text-4xl lg:text-5xl xl:text-7xl self-center font-serif">
+                <div className="col-start-2 col-span-5 sm:col-start-3 sm:col-span-3 md:col-start-4 md:col-span-3 text-3xl md:text-4xl lg:text-5xl xl:text-7xl self-center font-serif">
                     <div className="flex flex-row">
                         <h1>
                             Hello there
@@ -44,7 +44,7 @@ const Profile = () => {
                             <span
                                 className="extrabold"
                                 style={{
-                                    color: "blue",
+                                    color:"rgb(46,196,182)",
                                     margin: 15
                                 }}
                             >

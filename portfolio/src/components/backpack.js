@@ -35,9 +35,12 @@ const Heading = styled.div`
   }
 `
 const BackpackItem = styled.div`
+  
   li{
     font-family: sans-serif;
-    height: 7rem;
+    height: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
     place-items: center;
     object-fit: contain;
   }
@@ -46,21 +49,27 @@ const BackpackItem = styled.div`
     line-height: 1;
     margin-right: 20px;
   }
-  img{
-    height: 80px;
-    width: 60px;
-    margin-right: 20px;
-  }
+
   h1{
     font-size: 1.4em;
+    color:rgb(46,196,182);
+    font-weight: bold;
+  }
+  h3{
+    color:rgb(46,196,182);
+    font-weight: bold;
   }
 `
 
 const Backpack = () => {
     return(
-        <section id="BackPack" className="xl:px-0">
+        <section id="Backpack" className="xl:px-0">
             <Heading className="pb-4 mt-6 text-4xl md:text-5xl lg:text-6xl xl:text-6xl justify-center self-center font-serif">
-                <h1>My Development Backpack</h1>
+                <h1
+                    style={{
+                        color:"rgb(46,196,182)",
+                    }}
+                >My Development Backpack</h1>
             </Heading>
             <div className="grid">
                 <StaticImage
@@ -69,17 +78,17 @@ const Backpack = () => {
                     alt="MyProfile photo"
                 />
             </div>
-            <BackpackItem className="grid grid-cols-3 lg:ml-10 xl:ml-0 px-6 lg:px-4 mt-2 lg:mt-10"
+            <BackpackItem className="grid grid-cols-3 lg:ml-10 xl:ml-0 px-6 lg:px-4 mt-4 lg:mt-10"
                     style={{
                         color:"white",
                         fontFamily:"Sriracha"
                     }}>
-                <div className="col-start-1 col-span-3 xl:col-span-1 px-3 ml-3">
-                    <h3 className="self-center text-center text-4xl mb-10">Languages</h3>
+                <div className="col-start-1 col-span-3 xl:col-span-1 px-3 sm:ml-3 md:ml-0 md:pl-0">
+                    <h3 className="self-center text-center text-4xl mb-8 mt-4 ">Languages</h3>
                     <ul>
                         <li>
                             <div className="inline-flex">
-                                <div><i className="devicon-cplusplus-plain colored "/></div>
+                                <div><i className="devicon-cplusplus-plain colored"/></div>
                                 <div>
                                     <h1 className="block">C++</h1>
                                     <p>My go to programming language for competitive programming. </p>
@@ -134,16 +143,11 @@ const Backpack = () => {
                     </ul>
                 </div>
                 <div className="col-start-1 col-span-3 xl:col-start-2 xl:col-span-1 ">
-                    <h3 className="self-center text-center text-4xl mb-10">Libraries & Frameworks</h3>
+                    <h3 className="self-center text-center text-4xl mb-8 mt-4">Libraries & Frameworks</h3>
                     <ul>
                         <li>
                             <div className="inline-flex">
-                                <StaticImage
-                                    className="flex flex-row object-contain mr-5 pr-4"
-                                    src="../images/django.png"
-                                    alt="django icon"
-
-                                />
+                                <i className="devicon-django-plain"/>
                                 <div>
                                     <h1 className="block">Django</h1>
                                     <p>My go to framework of Python when it comes in building any back-end project.</p>
@@ -178,22 +182,22 @@ const Backpack = () => {
                             </div>
                         </li>
                         <li>
-                            <div className="inline-flex">
+                            <div className="inline-flex ">
                                 <StaticImage
-                                    className="flex flex-row object-contain"
+                                    className="flex flex-row object-contain w-16 h-16 mr-4 xl:mr-5 pr-4"
                                     src="../images/tailwind.png"
                                     alt="django icon"
                                 />
                                 <div>
                                     <h1 className="block">TailwindCSS</h1>
-                                    <p>Hello</p>
+                                    <p>Styling of html elements</p>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div className="col-start-1 col-span-3 xl:col-starts-3 xl:col-span-1 xl:px-8">
-                    <h3 className="self-center text-center text-4xl mb-10">Tools & Others</h3>
+                    <h3 className="self-center text-center text-4xl mb-8 mt-4">Tools & Others</h3>
                     <ul>
                         <li>
                             <div className="inline-flex">

@@ -37,7 +37,12 @@ const Profile = () => {
     return (
         <section id="AboutMe">
             <Heading className="pb-4 mt-6 text-4xl md:text-5xl lg:text-6xl xl:text-6xl self-center font-serif">
-                <h1>Short Introduction</h1>
+                <h1
+                    style={{
+                    color:"rgb(46,196,182)",
+                    margin: 15
+                }}
+                >   Short Introduction</h1>
             </Heading>
             <div className="grid grid-cols-6 gap-10 mt-2 lg:mt-0 px-6 lg:px-4">
                 <div className="hidden lg:block lg:col-start-1 lg:col-span-2 place-self-center place-items-end ">
@@ -52,7 +57,7 @@ const Profile = () => {
                     style={{
                         color:"white"
                     }}>
-                    <p className="p-2 md:mb-4">I'm Naman Singh, and as you might have already read. </p>
+                    <p className="p-2 md:mb-4">I'm <span  >Naman Singh</span>, and as you might have already read. </p>
 
                     <p className="p-2 md:mb-4">I am a sophomore from Bangalore pursuing my Bachelor's in Computer Science and Engineering.</p>
 
