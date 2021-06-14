@@ -13,7 +13,16 @@ const IndexPage = () => {
       <Helmet>
         <html lang='en' />
             <title>Naman Singh</title>
-        <meta name='description' content="Naman Singh's Portfolio"  />
+            <meta name='description' content="Naman Singh's Portfolio"  />
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6D6ZWE2TG"/>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments)}
+              gtag('js', new Date());
+
+              gtag('config', 'G-Z6D6ZWE2TG');
+            </script>
       </Helmet>
       <main>
         <NavigationBar/>
