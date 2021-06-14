@@ -14,14 +14,6 @@ const IndexPage = () => {
         <html lang='en' />
             <title>Naman Singh</title>
             <meta name='description' content="Naman Singh's Portfolio"  />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6D6ZWE2TG"></script>
-            <script>
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments)}
-              gtag('js', new Date());
-
-              gtag('config', 'G-Z6D6ZWE2TG');
-            </script>
       </Helmet>
       <main>
         <NavigationBar/>
